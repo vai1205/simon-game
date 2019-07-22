@@ -9,14 +9,16 @@ The game creates a series of tones and lights and requires a user to repeat the 
 # how to play
 * Press any key from your keyboard to begin the Game.
 * Each of the four color displayed in the game has got its own tone.
-* One of the four colors out of the four colors will appear to blow up with it's tone.
+* One of colors out of four colors will appear to glow up with it's tone.
 * Now the system will wait for your input. You need to click on the same color.
-* This time, system will glow again any color randomly.
+* This time, system will again glow any color randomly.
 * You need to remember the previous color and click on the previous color followed by the current one.
 * System will keep glowing one of the four colors making the series longer each time.
 * You need to remember the sequence of colors and click on color boxes in same sequence each time your turn comes.
 * In case you click on wrong color sequence box, you loose the game.
+* You can see your score, once you loose the game.
 * You can restart it again by pressing any key on your keyboard.
+* After restarting, you can see the score of your previous game.
 # technology stack
 * HTML
 * CSS
