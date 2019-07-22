@@ -2,9 +2,18 @@ var gamePattern = [];
 var userPattern = [];
 var colorArray = ["green", "red", "blue", "yellow"];
 var level = 0;
+var scoreCounter;
 var starter = true;
+var previouslyPlayed = false;
 $("body").on("keypress", function() {
   if (starter) {
+    if (previouslyPlayed){
+      if(!scoreCounter){
+        $("#score-display").text("Last score: "+ 0);
+      } else {
+        $("#score-display").text("Last score: "+ scoreCounter);
+      }
+    }
     starter = false;
     nextSequence();
   }
@@ -53,6 +62,14 @@ if (gamePattern[index]===userPattern[index]){
 else{
   alert ("wrong move buddy!");
   $("#level-title").text("Game over. Press any key to restart!");
+  previouslyPlayed = true;
+  $("#score-display").css("visibility","visible");
+  if (level === 1){
+  $("#score-display").text("Your score: "+ 0);
+} else{
+  scoreCounter = level -1;
+  $("#score-display").text("Your score: "+ scoreCounter);
+}
   var audio = new Audio ("sounds/wrong.mp3");
   audio.play();
   $("body").addClass("game-over");
